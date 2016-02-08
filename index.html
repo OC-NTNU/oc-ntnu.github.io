@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Text Mining in Marine Science</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/oc-ntnu.css">
+</head>
+<body>
+
+<!--
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Logo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+-->
+
+<div class="container-fluid content" style="height: 95%;overflow-y: auto">
+    <div class="row content ymax">
+        <div class="col-sm-12 text-left ymax" style="padding-left: 0px; padding-right: 0;">
+            <div id="myCarousel" class="carousel slide ymax" data-ride="carousel" data-interval=false>
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                    <li data-target="#myCarousel" data-slide-to="5"></li>
+                    <li data-target="#myCarousel" data-slide-to="6"></li>
+
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+
+                    <div class="item active">
+                        <div class="container-fluid text-center">
+
+                            <div class="row content">
+
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-8">
+                                    <div class="page-header">
+                                        <h1>Text Mining in Marine Science</h1>
+                                        <h4><i>Fishing for Knowledge  in an Ocean of Text</i></h4>
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-2"></div>
+
+                            </div>
+                            <div class="row content main">
+
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-8">
+                                    <figure>
+                                        <img src="img/diatoms.jpg" class="figure" style="max-width: 600px;">
+                                        <figcaption>
+                                            Circle of diatoms on a slide / Wikipedia / License CC BY-SA 3.0
+                                        </figcaption>
+                                    </figure>
+                                </div>
+
+                                <div class="col-sm-2"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="container-fluid text-left">
+                            <div class="row content">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-8">
+                                    <div class="page-header">
+                                        <h1>Drowning in Information</h1>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2"></div>
+                            </div>
+                            <div class="row content main">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4">
+                                    <h4 style="margin-top: 0px">Scientific literature keeps growing</h4>
+
+                                    <p>The number of scientific publications is growing at a fast rate and is estimated
+                                        to double every nine years.</p>
+
+                                    <h4>Reading takes time</h4>
+
+                                    <p>This makes it hard for scientists, researchers and policy makers to keep up with
+                                        the literature, leaving little time to read outside their own field.</p>
+
+                                    <h4>Fragmentation of knowledge</h4>
+
+                                    <p>We become even more specialised, publishing in our own journals, attending our
+                                        own conferences and developing our own terminology. All of this hampers
+                                        cross-disciplinary communication and furthers the fragmentation of
+                                        knowledge. </p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <p>This fragmentation is unfortunate, because an understanding of global challenges
+                                        like climate change requires synthesis of knowledge across scientific
+                                        disciplines.</p>
+                                    <figure>
+                                        <img src="img/wave.png" class="figure" style="max-width: 360px;margin-top: 15px">
+                                        <figcaption>
+                                            From the book “The Power of Infographics” by Mark Smiciklas (2012)
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-sm-2"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="container-fluid text-left">
+                            <div class="row content">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-8">
+                                    <div class="page-header">
+                                        <h1>Extracting Knowledge from text</h1>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2"></div>
+                            </div>
+                            <div class="row content main">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4">
+                                    <p>Scientists, researchers and policy makers thus need computational tools to help
+                                        them coping with the overwhelming amount of knowledge encoded in text.</p>
+
+                                    <h4>Search Engines</h4>
+
+                                    <p>One example of these are search engines which retrieve documents matching the
+                                        keywords we provide. Search engines are a marvellous technology, but it provides
+                                        only a part of the solution. Who has the time to check ten thousand hits for
+                                        relevant information? Moreover, search engines often have difficulties with
+                                        understanding human language - see Computers and Language.</p>
+                                </div>
+                                <div class="col-sm-4">
+
+                                    <h4 style="margin-top: 0px">Text Mining</h4>
+
+                                    <p>Text mining aims at processing large amounts of text to reveal hidden
+                                        connections and patterns. Since understanding human language is such a hard
+                                        task, text mining efforts have focused on extracting predetermined types of
+                                        information, ignoring everything else in the text.
+                                    </p>
+                                    <p>For instance, we can focus on identifying all the mentions of marine species in
+                                        text. From the observation that two species are frequently mentioned together in
+                                        the same sentence, we may deduce that they are probably associated. In addition,
+                                        targeting a specific relation between species — like A eats B — would enables us
+                                        to automatically construct food chains/webs from text.</p>
+                                </div>
+                                <div class="col-sm-2"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="container-fluid text-left">
+                            <div class="row content">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-8">
+                                    <div class="page-header">
+                                        <h1>Supporting Knowledge Discovery</h1>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2"></div>
+
+                            </div>
+                            <div class="row content main">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4">
+                                    <h4>Knowledge Discovery</h4>
+
+                                    <p>Knowledge extracted through text mining can then be combined with existing
+                                        knowledge from databases as well as automatic reasoning in order to discover new
+                                        knowledge. For example, a system may suggest a new hypothesis connecting two or
+                                        more phenomena — extracted from different articles —through a chain of causal
+                                        relations (a process also known as Literature-based Knowledge Discovery). Of
+                                        course, we still need humans to check and verify such hypotheses.
+                                    </p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <img src="img/system.png" class="figure" style="max-width: 481px">
+                                </div>
+
+                                <div class="col-sm-2"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="container-fluid text-left">
+                            <div class="row content">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-8">
+                                    <div class="page-header">
+                                        <h1>Computers and Language</h1>
+                                    </div>
+                                    <p>Computers are faced with at least two problems when processing human
+                                        language.</p>
+                                </div>
+                                <div class="col-sm-2"></div>
+                            </div>
+                            <div class="row content main">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4">
+                                    <h4>Variability</h4>
+
+                                    <p>We can say the same thing in many different ways. For example, synonyms such as
+                                        “water” and “H2O” carry virtually the same meaning. Similarly, a verbal
+                                        expression like “the temperature increases” can also be expressed in a nominal
+                                        forms such
+                                        “an increased temperature” or “in increase in temperature”. Variability, among
+                                        other things, makes it hard to search with keywords.</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <h4>Ambiguity</h4>
+
+                                    <p>The things we say can often mean different things. Does the word “plant” refer to
+                                        a living organism or to a factory? Does the phrase “more rain and less snow in
+                                        the winter” mean there is more rain in the winter? We rarely have problems with
+                                        ambiguity, as our knowledge of the world helps us to effortlessly find the right
+                                        interpretation. In contrast, computers often struggle with many possible
+                                        interpretations.</p>
+                                </div>
+                                <div class="col-sm-2"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="container-fluid text-left">
+                            <div class="row content">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-8">
+                                    <div class="page-header">
+                                        <h1> Text Mining in Ocean-Certain </h1>
+                                    </div>
+                                    <p><a href="http://oceancertain.eu/">Ocean-Certain</a> is an EU FP7 research project
+                                        investigating the impact of combined
+                                        climatic and non-climatic stressors on the food web and the connected biological
+                                        pump. The text mining efforts within the project comprise the following
+                                        steps:</p>
+                                </div>
+                                <div class="col-sm-2"></div>
+                            </div>
+                            <div class="row content main">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4">
+                                    <h4>1. Information Retrieval</h4>
+
+                                    <p> Creating a large collection of preprocessed and indexed articles
+                                        in Marine science and related fields.
+                                    </p>
+
+                                    <h4>2. Information Extraction</h4>
+
+                                    <p>Automatically extracting change events - for example,
+                                        “pH level of surface water in the Arctic Ocean is rising”, “primary
+                                        production has decreased”, etc. Moreover, causal relations and correlations
+                                        between these change events are detected - for example, “adding iron causes
+                                        phytoplankton growth”.
+                                    </p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <h4>3. Knowledge Discovery</h4>
+
+                                    <p> Combining extracted information from separate articles with background knowledge
+                                        and reasoning algorithms to produce new hypotheses in the form of causal chains
+                                        or feedback loops. Background knowledge comes from ontologies and linked data,
+                                        as well as modelling of domain expert knowledge.
+                                    </p>
+
+                                    <h4>4. User Interface</h4>
+
+                                    <p>Presenting this knowledge to end users as an interactive web application, which
+                                        includes browsable network visualisations. </p>
+                                </div>
+                                <div class="col-sm-2"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="container-fluid text-left">
+                            <div class="row content">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-8">
+                                    <div class="page-header">
+                                        <h1>Contact</h1>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2"></div>
+                            </div>
+                            <div class="row content main">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4">
+                                    <p>For more information regarding text mining please contact Erwin Marsi
+                                        (<a href="mailto:emarsi@idi.ntu.no" target="_top">emarsi@idi.ntnu.no</a>)
+                                        or Pinar Øzturk
+                                        (<a href="mailto:pinar@idi.ntu.no" target="_top">pinar@idi.ntnu.no</a>) at the
+                                        Norwegian
+                                        University of Science and Technology (NTNU). For questions about
+                                        <a href="http://oceancertain.eu/">Ocean-Certain</a>
+                                        in general, contact Murat Van Ardalan
+                                        (<a href="mailto:murat.v.ardelan@ntnu.no"
+                                            target="_top">murat.v.ardelan@ntnu.no</a>).</p>
+
+                                    <a href="http://oceancertain.eu/"><img src="img/oc_logo.png" style="max-width: 205px;
+                                    margin-left: auto; margin-right: auto; display: block; padding: 15px"></a>
+                                </div>
+                                <div class="col-sm-4">
+                                    <small>
+                                        <p>The OCEAN-CERTAIN partners are:</p>
+                                        <ul>
+                                            <li><a href="http://www.ntnu.no" target="_blank">NTNU- Norwegian University
+                                                of
+                                                Science and Technology, Norway</a></li>
+                                            <li><a href="http://www.uib.no/en" target="_blank">UIB- University of
+                                                Bergen,
+                                                Norway</a></li>
+                                            <li><a href="http://www.geomar.de/en/" target="_blank">GEOMAR- Helmholtz
+                                                Centre
+                                                for Ocean Research, Kiel, Germany</a></li>
+                                            <li><a href="https://www.vito.be/EN/HomepageAdmin/Home/Pages/Homepage.aspx"
+                                                   target="_blank">VITO- Vlaamse Instelling voor Technologisch Onderzoek
+                                                N.V. (The Flemish Institute for Technological Research), Belgium</a>
+                                            </li>
+                                            <li><a href="http://imst.deu.edu.tr/" target="_blank">DEU- Dokuz Eylul
+                                                University, Turkey</a></li>
+                                            <li><a href="http://www.gu.se/english" target="_blank">UGOT- University of
+                                                Gothenburg, Sweden</a></li>
+                                            <li><a href="http://www.griffith.edu.au/" target="_blank">GRIFFITH- Griffith
+                                                University, Australia</a></li>
+                                            <li><a href="https://www.uach.cl/" target="_blank">UACH- Austral University
+                                                of
+                                                Chile, Chile</a></li>
+                                            <li><a href="http://www.ismar.cnr.it/index_html-1?set_language=en&amp;cl=en"
+                                                   target="_blank">CNR-ISMAR- The National Research Council, Italy</a>
+                                            </li>
+                                            <li><a href="http://www.cefas.defra.gov.uk/" target="_blank">CEFAS- The
+                                                Secretary of State for Environment, Food and Rural Affairs, UK</a></li>
+                                            <li><a href="http://www.utalca.cl/english/#/english/" target="_blank">TALCA-
+                                                University of Talca, Chile</a></li>
+                                        </ul>
+                                        <p>
+                                            <span
+                                                xmlns:dct="http://purl.org/dc/terms/"
+                                                href="http://purl.org/dc/dcmitype/Text" property="dct:title"
+                                                rel="dct:type">Text Mining in Marine Science</span> by
+                                            <a xmlns:cc="http://creativecommons.org/ns#"
+                                               href="https://www.ntnu.edu/employees/-/employee/emarsi"
+                                               property="cc:attributionName"
+                                               rel="cc:attributionURL">Erwin Marsi</a> is
+                                            licensed under a <a rel="license"
+                                                                href="http://creativecommons.org/licenses/by/4.0/">Creative
+                                            Commons
+                                            Attribution 4.0 International License</a>.<br />
+                                            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                                                <img alt="Creative Commons License"
+                                                     style="border-width:0;"
+                                                     src="https://i.creativecommons.org/l/by/4.0/80x15.png"/></a>
+                                        </p>
+                                    </small>
+                                </div>
+                                <div class="col-sm-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<footer class="container-fluid text-center">
+
+</footer>
+
+</body>
+</html>
