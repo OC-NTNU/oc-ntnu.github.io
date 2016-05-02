@@ -1,0 +1,62 @@
+
+
+.page-header {  
+    margin-top: 70px;
+}
+
+
+figcaption {
+    margin-top: 10px;
+    font-size: x-small;
+    color: #555;
+}
+
+
+.carousel-inner {
+    margin-bottom:50px;
+}
+
+.carousel-indicators li {
+    border-color: #555;
+    background-color: #ccc;
+}
+
+.carousel-indicators .active {
+    background-color: #555;
+}
+
+
+.popover{
+    max-width: 75%; /* Max Width of the popover (depending on the container!) */
+}
+
+.biblinks {
+    margin-top: 1em;
+}
+
+.section {
+    background-color: white;
+    margin-top: 32px;
+}
+
+
+#footer {
+    /* background: url(../img/bg01.jpg) no-repeat center top; */
+    background-color: #3498db;
+    color: white;
+    margin-top: 32px;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 350px;
+    width: 100%;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

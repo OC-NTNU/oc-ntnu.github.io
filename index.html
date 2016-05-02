@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+
+    <title>Text Mining in Marine Science</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/full-slider.css" rel="stylesheet">
+    <link href="assets/css/flatty.css" rel="stylesheet">
+    <link href="assets/css/oc-ntnu.css" rel="stylesheet">
+
+    <!-- Fonts from Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><b>TMMS</b></a>
+            <a href="#" class="pull-left"><img style="margin-top: 5px" src="assets/img/sub-small.png"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#myCarousel">About</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#demos">Demos</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+
+
+<!-- Full Page Image Background Carousel Header -->
+<header id="myCarousel" class="carousel slide" data-interval="false" style="background-color: white">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+        <li data-target="#myCarousel" data-slide-to="6">
+        <li data-target="#myCarousel" data-slide-to="7"></li>
+    </ol>
+
+    <!-- Wrapper for Slides -->
+    <div class="carousel-inner" style="background: white">
+
+        <!-- SLIDE #1 -->
+        <div class="item active">
+            <div class="container text-center">
+
+                <div class="row content">
+
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <div class="page-header">
+                            <h1>Text Mining in Marine Science</h1>
+                            <h4><i>Fishing for Knowledge  in an Ocean of Text</i></h4>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-2"></div>
+
+                </div>
+                <div class="row content main">
+
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <figure>
+                            <img class="img-responsive img-circle center-block" src="assets/img/diatoms.jpg"
+                                 style="max-width: 60%">
+                            <figcaption>
+                                Circle of diatoms on a slide / Wikipedia / License CC BY-SA 3.0
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- SLIDE #2 -->
+        <div class="item">
+            <div class="container-fluid text-left">
+                <div class="row content">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <div class="page-header">
+                            <h1>Drowning in Information</h1>
+                        </div>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+                <div class="row content main">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-4">
+                        <h4 style="margin-top: 0px">Scientific literature keeps growing</h4>
+
+                        <p>The number of scientific publications is growing at a fast rate and is estimated
+                            to double every nine years.</p>
+
+                        <h4>Reading takes time</h4>
+
+                        <p>This makes it hard for scientists, researchers and policy makers to keep up with
+                            the literature, leaving little time to read outside their own field.</p>
+
+                        <h4>Fragmentation of knowledge</h4>
+
+                        <p>We become even more specialised, publishing in our own journals, attending our
+                            own conferences and developing our own terminology. All of this hampers
+                            cross-disciplinary communication and furthers the fragmentation of
+                            knowledge. </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p>This fragmentation is unfortunate, because an understanding of global challenges
+                            like climate change requires synthesis of knowledge across scientific
+                            disciplines.</p>
+                        <figure>
+                            <img src="assets/img/wave.png" class="img-responsive center-block" style="max-width: 75%;">
+                            <figcaption>
+                                From the book “The Power of Infographics” by Mark Smiciklas (2012)
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- SLIDE #3 -->
+        <div class="item">
+            <div class="container-fluid text-left">
+                <div class="row content">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <div class="page-header">
+                            <h1>Extracting Knowledge from text</h1>
+                        </div>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+                <div class="row content main">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-4">
+                        <p>Scientists, researchers and policy makers thus need computational tools to help
+                            them coping with the overwhelming amount of knowledge encoded in text.</p>
+
+                        <h4>Search Engines</h4>
+
+                        <p>One example of these are search engines which retrieve documents matching the
+                            keywords we provide. Search engines are a marvellous technology, but it provides
+                            only a part of the solution. Who has the time to check ten thousand hits for
+                            relevant information? Moreover, search engines often have difficulties with
+                            understanding human language - see Computers and Language.</p>
+                    </div>
+                    <div class="col-sm-4">
+
+                        <h4 style="margin-top: 0px">Text Mining</h4>
+
+                        <p>Text mining aims at processing large amounts of text to reveal hidden
+                            connections and patterns. Since understanding human language is such a hard
+                            task, text mining efforts have focused on extracting predetermined types of
+                            information, ignoring everything else in the text.
+                        </p>
+                        <p>For instance, we can focus on identifying all the mentions of marine species in
+                            text. From the observation that two species are frequently mentioned together in
+                            the same sentence, we may deduce that they are probably associated. In addition,
+                            targeting a specific relation between species — like A eats B — would enables us
+                            to automatically construct food chains/webs from text.</p>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE #4 -->
+        <div class="item">
+            <div class="container-fluid text-left">
+                <div class="row content">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <div class="page-header">
+                            <h1>Supporting Knowledge Discovery</h1>
+                        </div>
+                    </div>
+                    <div class="col-sm-2"></div>
+
+                </div>
+                <div class="row content main">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-4">
+                        <h4>Knowledge Discovery</h4>
+
+                        <p>Knowledge extracted through text mining can then be combined with existing
+                            knowledge from databases as well as automatic reasoning in order to discover new
+                            knowledge. For example, a system may suggest a new hypothesis connecting two or
+                            more phenomena — extracted from different articles —through a chain of causal
+                            relations (a process also known as Literature-based Knowledge Discovery). Of
+                            course, we still need humans to check and verify such hypotheses.
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <img class="img-responsive center-block" src="assets/img/system.png" style="max-width: 75%">
+                    </div>
+
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE #5 -->
+        <div class="item">
+            <div class="container-fluid text-left">
+                <div class="row content">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <div class="page-header">
+                            <h1>Computers and Language</h1>
+                        </div>
+                        <p>Computers are faced with at least two problems when processing human
+                            language.</p>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+                <div class="row content main">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-4">
+                        <h4>Variability</h4>
+
+                        <p>We can say the same thing in many different ways. For example, synonyms such as
+                            “water” and “H2O” carry virtually the same meaning. Similarly, a verbal
+                            expression like “the temperature increases” can also be expressed in a nominal
+                            forms such
+                            “an increased temperature” or “in increase in temperature”. Variability, among
+                            other things, makes it hard to search with keywords.</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <h4>Ambiguity</h4>
+
+                        <p>The things we say can often mean different things. Does the word “plant” refer to
+                            a living organism or to a factory? Does the phrase “more rain and less snow in
+                            the winter” mean there is more rain in the winter? We rarely have problems with
+                            ambiguity, as our knowledge of the world helps us to effortlessly find the right
+                            interpretation. In contrast, computers often struggle with many possible
+                            interpretations.</p>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE #6 -->
+        <div class="item">
+            <div class="container-fluid text-left">
+                <div class="row content">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <div class="page-header">
+                            <h1> Text Mining in Ocean-Certain </h1>
+                        </div>
+                        <p><a href="http://oceancertain.eu/">Ocean-Certain</a> is an EU FP7 research project
+                            investigating the impact of combined
+                            climatic and non-climatic stressors on the food web and the connected biological
+                            pump. The text mining efforts within the project comprise the following
+                            steps:</p>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+                <div class="row content main">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-4">
+                        <h4>1. Information Retrieval</h4>
+
+                        <p> Creating a large collection of preprocessed and indexed articles
+                            in Marine science and related fields.
+                        </p>
+
+                        <h4>2. Information Extraction</h4>
+
+                        <p>Automatically extracting change events - for example,
+                            “pH level of surface water in the Arctic Ocean is rising”, “primary
+                            production has decreased”, etc. Moreover, causal relations and correlations
+                            between these change events are detected - for example, “adding iron causes
+                            phytoplankton growth”.
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <h4>3. Knowledge Discovery</h4>
+
+                        <p> Combining extracted information from separate articles with background knowledge
+                            and reasoning algorithms to produce new hypotheses in the form of causal chains
+                            or feedback loops. Background knowledge comes from ontologies and linked data,
+                            as well as modelling of domain expert knowledge.
+                        </p>
+
+                        <h4>4. User Interface</h4>
+
+                        <p>Presenting this knowledge to end users as an interactive web application, which
+                            includes browsable network visualisations. </p>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE #7 -->
+        <div class="item">
+            <div class="container-fluid text-left">
+                <div class="row content">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <div class="page-header">
+                            <h1>Contact</h1>
+                        </div>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+                <div class="row content main">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-4">
+                        <p>For more information regarding text mining please contact Erwin Marsi
+                            (<a href="mailto:emarsi@idi.ntu.no" target="_top">emarsi@idi.ntnu.no</a>)
+                            or Pinar Øzturk
+                            (<a href="mailto:pinar@idi.ntu.no" target="_top">pinar@idi.ntnu.no</a>) at the
+                            Norwegian
+                            University of Science and Technology (NTNU). For questions about
+                            <a href="http://oceancertain.eu/">Ocean-Certain</a>
+                            in general, contact Murat Van Ardalan
+                            (<a href="mailto:murat.v.ardelan@ntnu.no"
+                                target="_top">murat.v.ardelan@ntnu.no</a>).</p>
+
+                        <a href="http://oceancertain.eu/"><img class="img-responsive center-block"
+                                                               src="assets/img/oc_logo.png"></a>
+                    </div>
+                    <div class="col-sm-4">
+                        <small>
+                            <p>The OCEAN-CERTAIN partners are:</p>
+                            <ul>
+                                <li><a href="http://www.ntnu.no" target="_blank">NTNU- Norwegian University
+                                    of
+                                    Science and Technology, Norway</a></li>
+                                <li><a href="http://www.uib.no/en" target="_blank">UIB- University of
+                                    Bergen,
+                                    Norway</a></li>
+                                <li><a href="http://www.geomar.de/en/" target="_blank">GEOMAR- Helmholtz
+                                    Centre
+                                    for Ocean Research, Kiel, Germany</a></li>
+                                <li><a href="https://www.vito.be/EN/HomepageAdmin/Home/Pages/Homepage.aspx"
+                                       target="_blank">VITO- Vlaamse Instelling voor Technologisch Onderzoek
+                                    N.V. (The Flemish Institute for Technological Research), Belgium</a>
+                                </li>
+                                <li><a href="http://imst.deu.edu.tr/" target="_blank">DEU- Dokuz Eylul
+                                    University, Turkey</a></li>
+                                <li><a href="http://www.gu.se/english" target="_blank">UGOT- University of
+                                    Gothenburg, Sweden</a></li>
+                                <li><a href="http://www.griffith.edu.au/" target="_blank">GRIFFITH- Griffith
+                                    University, Australia</a></li>
+                                <li><a href="https://www.uach.cl/" target="_blank">UACH- Austral University
+                                    of
+                                    Chile, Chile</a></li>
+                                <li><a href="http://www.ismar.cnr.it/index_html-1?set_language=en&amp;cl=en"
+                                       target="_blank">CNR-ISMAR- The National Research Council, Italy</a>
+                                </li>
+                                <li><a href="http://www.cefas.defra.gov.uk/" target="_blank">CEFAS- The
+                                    Secretary of State for Environment, Food and Rural Affairs, UK</a></li>
+                                <li><a href="http://www.utalca.cl/english/#/english/" target="_blank">TALCA-
+                                    University of Talca, Chile</a></li>
+                            </ul>
+                            <p style="font-size: x-small;">
+                                            <span
+                                                    xmlns:dct="http://purl.org/dc/terms/"
+                                                    href="http://purl.org/dc/dcmitype/Text" property="dct:title"
+                                                    rel="dct:type">Text Mining in Marine Science</span> by
+                                <a xmlns:cc="http://creativecommons.org/ns#"
+                                   href="https://www.ntnu.edu/employees/-/employee/emarsi"
+                                   property="cc:attributionName"
+                                   rel="cc:attributionURL">Erwin Marsi</a> is
+                                licensed under a <a rel="license"
+                                                    href="http://creativecommons.org/licenses/by/4.0/">Creative
+                                Commons
+                                Attribution 4.0 International License</a>.<br/>
+                                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                                    <img alt="Creative Commons License"
+                                         style="border-width:0;"
+                                         src="https://i.creativecommons.org/l/by/4.0/80x15.png"/></a>
+                            </p>
+                        </small>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- SLIDE #8 -->
+        <div class="item">
+            <div class="container-fluid text-left">
+                <div class="row content">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <div class="page-header">
+                            <h1>Download as PDF</h1>
+                        </div>
+                        <p>This text is available for <a
+                                href="https://drive.google.com/open?id=0B6_H_KFDE9oMYXRqUWxCRmZMV3M" target="_blank">download</a>
+                            as a brochure in PDF format.</p>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+                <div class="row content main">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-4">
+                        <img class="img-responsive" src="assets/img/page1.jpg">
+                    </div>
+                    <div class="col-sm-4">
+                        <img class="img-responsive" src="assets/img/page2.jpg">
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+
+
+</header>
+
+
+<!-- Team -->
+<div id="team" class="container section">
+    <div class="row mt centered">
+        <div class="col-lg-6 col-lg-offset-3">
+            <h1>The TMMS Team</h1>
+            <h3>Core Members</h3>
+        </div>
+    </div><!-- /row -->
+
+    <div class="row mt centered">
+        <div class="col-md-6">
+            <img class="img-circle" src="assets/img/pinar.jpg" width="140" alt="">
+            <h4>Pinar Øzturk</h4>
+            <p>Reasoning, Knowledge Representation</p>
+            <div><a title="pinar@idi.ntnu.no" href="mailto:pinar@idi.ntnu.no"><span
+                    class="glyphicon glyphicon-send"></span> email</a> |
+                <a href="http://www.ntnu.edu/employees/pinar" title="http://www.ntnu.edu/employees/pinar"> <span
+                        class="glyphicon glyphicon-globe"></span> web</a></div>
+        </div><!--/col-lg-6 -->
+
+        <div class="col-md-6">
+            <img class="img-circle" src="assets/img/erwin.jpg" width="140" alt="">
+            <h4>Erwin Marsi</h4>
+            <p>Natural Language Processing, User Interface</p>
+            <div><a title="emarsi@idi.ntnu.no" href="mailto:emarsi@idi.ntnu.no"><span
+                    class="glyphicon glyphicon-send"></span> email</a> |
+                <a href="http://www.ntnu.edu/employees/emarsi" title="http://www.ntnu.edu/employees/emarsi"> <span
+                        class="glyphicon glyphicon-globe"></span> web</a></div>
+        </div><!--/col-lg-6 -->
+    </div><!-- /row -->
+
+    <div class="row mt centered">
+        <div class="col-md-6">
+            <img class="img-circle" src="assets/img/rajendra.jpg" width="140" alt="">
+            <h4>Rajendra Prasath</h4>
+            <p>Information Retrieval, Crawling</p>
+            <div><a title="rajendra.prasath@idi.ntnu.no" href="mailto:rajendra.prasath@idi.ntnu.no"><span
+                    class="glyphicon glyphicon-send"></span> email</a> |
+                <a href="http://www.ntnu.edu/employees/rajendra" title="http://www.ntnu.edu/employees/rajendra"> <span
+                        class="glyphicon glyphicon-globe"></span> web</a></div>
+        </div><!--/col-lg-6 -->
+
+        <div class="col-md-6">
+            <img class="img-circle" src="assets/img/bisu.jpg" width="140" alt="">
+            <h4>Biswanath Barik</h4>
+            <p>Causal relation extraction</p>
+            <div><a title="biswanath.barik@idi.ntnu.no" href="mailto:biswanath.barik@idi.ntnu.no"><span
+                    class="glyphicon glyphicon-send"></span> email</a> |
+                <a href="http://www.ntnu.edu/employees/biswanab" title="http://www.ntnu.edu/employees/biswanab"> <span
+                        class="glyphicon glyphicon-globe"></span> web</a></div>
+        </div><!--/col-lg-6 -->
+    </div><!-- /row -->
+
+    <div class="row mt centered">
+        <div class="col-lg-6 col-lg-offset-3">
+            <h3>Contributors</h3>
+        </div>
+    </div><!-- /row -->
+
+    <div class="row mt centered">
+        <div class="col-md-6">
+            <h4>Current Master Students</h4>
+            <div>Knut Ryager</div>
+            <div>Mateusz Siniarski</div>
+
+
+        </div><!--/col-lg-6 -->
+
+        <div class="col-md-6">
+            <h4>Former Master Students</h4>
+            <div>Elias Aamot</div>
+            <div>Sean Holloway</div>
+            <div>Sindre Næss</div>
+
+        </div><!--/col-lg-6 -->
+    </div><!-- /row -->
+</div><!-- /container -->
+
+
+<!-- Publications -->
+<div id="publications" class="container section">
+    <div class="row mt centered">
+        <div class="col-lg-6 col-lg-offset-3">
+            <h1>Publications</h1>
+            <h3>Peer Reviewed Publications</h3>
+        </div>
+    </div><!-- /row -->
+
+    <div class="row mt">
+        <div class="col-md-6">
+            <div style="margin: 32px">
+                <h4>Text mining of related events from natural science literature</h4>
+                <div class="authors">Erwin Marsi, Pinar Øzturk</div>
+                <div class="venue">Proceeding of Workshop on Semantics, Analytics, Visualisation: Enhancing Scholarly
+                    Data (SAVE-SD 2016)
+                </div>
+                <div class="venue">Montreal, Canada</div>
+                <div class="date">April 11, 2016</div>
+                <div class="biblinks">
+                    <a href="#" onClick="return false;" data-container="body" data-trigger="hover"
+                       data-toggle="popover"
+                       data-title="Text mining of related events from natural science literature"
+                       data-placement="top"
+                       data-content="
+We present an approach to text mining in areas where the
+entities of interest can not be defined in advance. Our system is aimed at
+finding related events in natural science literature, in particular,
+changing/increasing/decreasing  variables  in  Marine  science  publications.  It
+enables  semantic  search  for  events  by  abstracting  from  morphological,
+lexical-semantic and syntactic variations. In addition, generalisation of
+variables through syntactic pruning helps finding similar variables.
+Relations between events are induced from co-occurrence frequencies.
+Extracted information is stored in a property graph database and accessed
+using the Cypher query language. A user interface presents events as a
+graph to visualise their type, frequency and relation strength, in
+combination with their textual sources.">
+                        <span class="glyphicon glyphicon-info-sign"></span> abstract</a> |
+                    <a href="http://cs.unibo.it/save-sd/2016/papers/pdf/marsi-savesd2016.pdf" target="_blank"><span
+                            class="glyphicon glyphicon-file"></span> paper</a> |
+                    <a href="https://drive.google.com/open?id=0B6_H_KFDE9oMd3lYc2pjTmZOUEk"><span
+                            class="glyphicon glyphicon-list-alt"></span> poster</a> |
+                    <a href="bibtex.html#Marsi:2016aa" target="_blank"><span class="glyphicon glyphicon-tag"></span>
+                        bibtex</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div style="margin: 32px">
+                <h4>Extraction and generalisation of variables from scientific publications</h4>
+                <div class="authors">Erwin Marsi, Pinar Øzturk</div>
+                <div class="venue">Proceedings of the 2015 Conference on Empirical Methods in Natural Language
+                    Processing
+                </div>
+                <div class="venue">Lisbon, Portugal</div>
+                <div class="venue">p. 505-511</div>
+                <div class="date">September 17–21, 2015</div>
+                <div class="biblinks">
+                    <a href="#" onClick="return false;" data-container="body" data-trigger="hover"
+                       data-toggle="popover"
+                       data-placement="top"
+                       data-title="Extraction and generalisation of variables from scientific publications"
+                       data-content="
+Scientific theories and models in Earth science typically involve changing \emph{variables} and their complex interactions, including correlations, causal relations and chains of positive/negati
+ve feedback loops.
+Variables tend to be complex rather than atomic entities and expressed as noun phrases containing multiple modifiers, e.g. 'oxygen depletion in the upper 500 m of the ocean or timing' and \
+'magnitude of surface temperature evolution in the Southern Hemisphere in deglacial proxy records'.
+Text mining from Earth science literature is therefore significantly different from biomedical text mining and requires different approaches and methods.
+Our approach aims at automatically locating and extracting variables and their direction of variation: increasing, decreasing or just changing.
+Variables are initially extracted by matching tree patterns onto the syntax trees of the source texts.
+Next, variables are generalised in order to enhance their similarity, facilitating hierarchical search and inference.
+This generalisation is accomplished by progressive pruning of syntax trees using a set of tree transformation operations.
+Text mining results are presented as a browsable variable hierarchy which allows users to inspect all mentions of a particular variable type in the text as well as any generalisations or specialisations.
+The approach is demonstrated on a corpus of 10k abstracts of Nature publications in the field of Marine science.
+We discuss experiences with this early prototype and outline a number of possible improvements and directions for future research.
+">
+                        <span class="glyphicon glyphicon-info-sign"></span> abstract</a> |
+                    <a href="http://aclweb.org/anthology/D15-1057" target="_blank"><span
+                            class="glyphicon glyphicon-file"></span> paper</a> |
+                    <a href="https://drive.google.com/open?id=0B6_H_KFDE9oMc1NBbk5XM2hQbHM"><span
+                            class="glyphicon glyphicon-list-alt"></span> poster</a> |
+                    <a href="bibtex.html#Marsi:2015aa" target="_blank"><span class="glyphicon glyphicon-tag"></span>
+                        bibtex</a>
+                </div>
+            </div>
+        </div>
+    </div><!-- /row -->
+
+
+    <div class="row mt">
+        <div class="col-md-6">
+            <div style="margin: 32px">
+                <h4>Literature-based discovery for Oceanographic climate science</h4>
+                <div class="authors">Elias Aamot</div>
+                <div class="venue">Proceedings of the Student Research Workshop at the 14th Conference of the European
+                    Chapter of the Association for Computational Linguistics
+                </div>
+                <div class="venue">Gothenburg, Sweden</div>
+                <div class="venue">p. 1-10</div>
+                <div class="date">April 26–30, 2014</div>
+                <div class="biblinks">
+                    <a href="#" onClick="return false;" data-container="body" data-trigger="hover"
+                       data-toggle="popover"
+                       data-title="Literature-based discovery for Oceanographic climate science"
+                       data-content="
+This  paper  presents  an  overview  of  the
+field of literature-based discovery, as originally  applied  in  biomedicine.
+Furthermore it identifies some of the challenges
+to employing the results of the field in a
+new  domain,  namely  oceanographic  climate  science,  and  elaborates  on  some  of
+the research that needs to be conducted to overcome these challenges.">
+                        <span class="glyphicon glyphicon-info-sign"></span> abstract</a> |
+                    <a href="http://www.aclweb.org/anthology/E14-3001" target="_blank"><span
+                            class="glyphicon glyphicon-file"></span> paper</a> |
+                    <a href="bibtex.html#aamot:2014:SRW" target="_blank"><span class="glyphicon glyphicon-tag"></span>
+                        bibtex</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div style="margin: 32px">
+                <h4>Towards text mining in climate science: Extraction of quantitative variables and their
+                    relations</h4>
+                <div class="authors">Erwin Marsi, Pinar Öztürk, Elias Aamot, Gleb Sizov, Murat van Ardelan</div>
+                <div class="venue">Proceedings of the Fourth Workshop on Building and Evaluating Resources for Health
+                    and Biomedical Text Processing
+                </div>
+                <div class="venue">Reykjavik, Iceland</div>
+                <div class="date">May 31, 2014</div>
+                <div class="biblinks">
+                    <a href="#" onClick="return false;" data-container="body" data-trigger="hover"
+                       data-toggle="popover"
+                       data-placement="top"
+                       data-title="Towards text mining in climate science: Extraction of quantitative variables and their relations"
+                       data-content="
+This paper addresses text mining in the cross-disciplinary fields of climate science,  marine science and environmental science.  It is
+motivated by the desire for literature-based knowledge discovery from scientific publications.  The particular goal is to automatically
+extract relations between quantitative variables from raw text. This results in rules of the form “If variable X increases, than variable Y
+decreases”.  As a first step in this direction, an annotation scheme is proposed to capture the events of interest – those of change, cause,
+correlation and feedback – and the entities involved in them, quantitative variables.  Its purpose is to serve as an intermediary step in
+the process of rule extraction.  It is shown that the desired rules can indeed be automatically extracted from annotated text.  A number
+of open challenges are discussed, including automatic annotation, normalisation of variables, reasoning with rules in combination with
+domain knowledge and the need for meta-knowledge regarding context of use.">
+                        <span class="glyphicon glyphicon-info-sign"></span> abstract</a> |
+                    <a href="http://www.nactem.ac.uk/biotxtm2014/papers/Marsietal.pdf" target="_blank"><span
+                            class="glyphicon glyphicon-file"></span> paper</a> |
+                    <a href="https://drive.google.com/file/d/0B6_H_KFDE9oMWWJLMVFkQTdLT0k/view?usp=sharing"
+                       target="_blank"><span class="glyphicon glyphicon-play"></span> slides</a> |
+                    <a href="bibtex.html#marsi2014towards" target="_blank"><span class="glyphicon glyphicon-tag"></span>
+                        bibtex</a>
+                </div>
+            </div>
+        </div>
+    </div><!-- /row -->
+
+
+    <div class="row mt centered">
+        <div class="col-lg-6 col-lg-offset-3">
+            <h3>Other Publications</h3>
+        </div>
+    </div><!-- /row -->
+
+
+    <div class="row mt">
+        <div class="col-md-6">
+            <div style="margin: 32px">
+                <h4>Can Computational Knowledge Discovery Tools Speed up Scientific Discovery?</h4>
+                <div class="authors">Pinar Öztürk, Erwin Marsi, Natalia Manola</div>
+                <div class="venue">LIBER 2015, Session 3: Data Exploitation and Reuse</div>
+                <div class="venue">London, UK</div>
+                <div class="date">June 24, 2015</div>
+                <div class="biblinks">
+                    <a href="http://www.liber2015.org.uk/event/session-3-data-exploitation-reuse/" target="_blank"><span
+                            class="glyphicon glyphicon-info-sign"></span> abstract</a> |
+                    <a href="http://www.liber2015.org.uk/wp-content/uploads/2015/03/3.2-Can-Computational-Knowledge-Discovery-Tools-Speed-up-Scientific-Discovery.pdf"
+                       target="_blank"><span class="glyphicon glyphicon-play"></span> slides</a> |
+                    <a href="bibtex.html#Ozturk:2015aa" target="_blank"><span class="glyphicon glyphicon-tag"></span>
+                        bibtex</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div style="margin: 32px">
+                <h4>Deliverable D1.1: Literature-based Knowledge Discovery in Climate, Marine and Environmental
+                    Science</h4>
+                <div class="authors">Erwin Marsi, Pinar Öztürk, Elias Aamot</div>
+                <div class="venue">Norwegian University of Science and Technology (NTNU)</div>
+                <div class="venue">Trondheim, Norway</div>
+                <div class="date">2014</div>
+                <div class="biblinks">
+                    <a href="#" onClick="return false;" data-container="body" data-trigger="hover"
+                       data-toggle="popover"
+                       data-placement="top"
+                       data-title="Deliverable D1.1: Literature-based Knowledge Discovery in Climate, Marine and Environmental Science"
+                       data-content="
+This deliverable surveys the state-of-the art in literature-based knowledge
+discovery. This includes a survey of key publications, approaches, software
+and resources related to literature-based knowledge discovery in general as
+well any work specifically in the area of climate, marine and environmental
+science. The purpose is to (1) prevent duplication of efforts, (2) to promote
+reuse of existing theory, practice and resources, (3) to identify potential
+bottlenecks early on and (4) to generally make sure that the results from
+work on WP1 will reach or exceed the state-of-the-art in the field. Chapter
+1 surveys text mining in general as a combination of information retrieval,
+information extraction, natural language processing and data mining. The
+remainder of the chapter is focused on text mining in biomedicine, as almost
+all work on literature mining originates from this area. A couple of text
+mining applications are described, followed by a description of the major
+tasks in text mining, i.e. entity detection, relation and event extraction. The
+closely related fields of machine reading and open information extraction are
+Briefly discussed. Chapter 2 provides an in depth survey of literature-based
+knowledge discovery. Approaches are grouped into domain-independent,
+concept-based and relation extraction-based – ranging from purely statistical
+methods to those involving sophisticated natural language processing. The
+largely unresolved issue of system evaluation is reviewed. Chapter 4 survey
+work on text mining in the domain of climate, marine and environmental
+science. Efforts specifically in this area turn out to be few and far between, so
+tools, resources and applications in related areas are taken into consideration
+here, for example, from ecology, geology and paleobiology.">
+                        <span class="glyphicon glyphicon-info-sign"></span> abstract</a> |
+                    <a href="https://drive.google.com/open?id=0B6_H_KFDE9oMd01HaHo4dzZLVnc" target="_blank"><span
+                            class="glyphicon glyphicon-file"></span> paper</a> |
+                    <a href="bibtex.html#Marsi:2014aa" target="_blank"><span class="glyphicon glyphicon-tag"></span>
+                        bibtex</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TEMMPLATE
+
+
+
+        <div class="row mt">
+            <div class="col-md-6" >
+                <div style="margin: 32px">
+                    <h4>TITLE</h4>
+                    <div class="authors">AUTHORS</div>
+                    <div class="venue">VENUE</div>
+                    <div class="venue">PLACE</div>
+                    <div class="date">DATA</div>
+                    <div class="biblinks">
+                        <a href="#" onClick="return false;" data-container="body" data-trigger="hover"
+                           data-toggle="popover"
+                           data-title="TITLE"
+                           data-content="
+    ABSTRACT">
+                            <span class="glyphicon glyphicon-info-sign"></span> abstract</a> |
+                        <a href="PAPER-URL" target="_blank"><span class="glyphicon glyphicon-file"></span> paper</a> |
+                        <a href="POSTER-URL" target="_blank"><span class="glyphicon glyphicon-list-alt"></span> poster</a> |
+                        <a href="SLIDES-URL" target="_blank"><span class="glyphicon glyphicon-play"></span> slides</a> |
+                        <a href="bibtex.html#TARGET" target="_blank"><span class="glyphicon glyphicon-tag"></span> bibtex</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6" >
+                <div style="margin: 32px">
+                    <h4>TITLE</h4>
+                    <div class="authors">AUTHORS</div>
+                    <div class="venue">VENUE</div>
+                    <div class="venue">PLACE</div>
+                    <div class="date">DATA</div>
+                    <div class="biblinks">
+                        <a href="#" onClick="return false;" data-container="body" data-trigger="hover"
+                           data-toggle="popover"
+                           data-title="TITLE"
+                           data-content="
+    ABSTRACT">
+                            <span class="glyphicon glyphicon-info-sign"></span> abstract</a> |
+                        <a href="PAPER-URL" target="_blank"><span class="glyphicon glyphicon-file"></span> paper</a> |
+                        <a href="POSTER-URL" target="_blank"><span class="glyphicon glyphicon-list-alt"></span> poster</a> |
+                        <a href="SLIDES-URL" target="_blank"><span class="glyphicon glyphicon-play"></span> slides</a> |
+                        <a href="bibtex.html#TARGET" target="_blank"><span class="glyphicon glyphicon-tag"></span> bibtex</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    -->
+
+</div><!-- /container -->
+
+
+<!-- Demos -->
+<div id="demos" class="container section">
+    <div class="row mt centered">
+        <div class="col-lg-6 col-lg-offset-3">
+            <h1>Demos</h1>
+        </div>
+    </div><!-- /row -->
+
+    <div class="row mt">
+        <div class="col-md-6">
+            <div style="margin: 32px">
+                <h4>Marine Variables Linker</h4>
+                <p>The Marine Variable Linkers helps you to find related events in marine science literature.
+                    The current demo system searches in about ten thousand abstracts from journals by
+                    Nature Publishing Group, including Nature.</p>
+                <a href="http://baleen.idi.ntnu.no/demos/demo4" target="_blank" class="btn btn-primary btn-lg btn-block"
+                   role="button">Try it!</a>
+            </div>
+        </div><!--/col-lg-6 -->
+
+        <div class="col-md-6">
+            <div style="margin: 32px">
+                <img class="img-responsive" src="assets/img/mvl.png" alt=""></div>
+        </div><!--/col-lg-6 -->
+    </div><!-- /row -->
+</div>
+
+
+<!-- Footer -->
+<div id="footer" class="container">
+    <div class="row">
+        <div class="col-md-6" style="padding: 60px">
+
+        </div>
+        <div class="col-md-6" style="padding: 60px">
+            <img class="pull-right" src="assets/img/sub-small.png">
+            <div>Web design by <a title="emarsi@idi.ntnu.no" href="mailto:emarsi@idi.ntnu.no" style="color:white;">Erwin
+                Marsi</a></div>
+            <div>Last updated: <span id="lastMod"></span></div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/oc-ntnu.js"></script>
+</body>
+</html>
