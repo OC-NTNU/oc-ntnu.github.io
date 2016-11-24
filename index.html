@@ -527,11 +527,11 @@
 
 
     <div class="row mt centered">
+        <!--
         <div class="col-md-6">
             <h4>Current Master Students</h4>
-            <div>Knut Ryager</div>
-            <div>Mateusz Siniarski</div>
-        </div><!--/col-lg-6 -->
+        </div>
+        -->
         <div class="col-md-6">
             <h4>Advisers</h4>
             <div>Murat van Ardelan</div>
@@ -545,6 +545,8 @@
             <div>Elias Aamot</div>
             <div>Sean Holloway</div>
             <div>Sindre Næss</div>
+            <div>Knut Ryager</div>
+            <div>Mateusz Siniarski</div>
         </div><!--/col-lg-6 -->
         <div class="col-md-6">
         </div><!--/col-lg-6 -->
@@ -791,6 +793,53 @@ here, for example, from ecology, geology and paleobiology.">
         </div>
     </div><!-- /row -->
 
+    <div class="row mt">
+        <div class="col-md-6">
+            <div style="margin: 32px">
+                <h4>Knowledge discovery from large collections of unstructured information</h4>
+                <div class="authors">Mateusz Siniarski</div>
+                <div class="venue"> Department of Computer and Information Science</div>
+                <div class="venue">Norwegian University of Science and Technology (NTNU)</div>
+                <div class="date">2016</div>
+                <div class="biblinks">
+                    <a href="#" onClick="return false;" data-container="body" data-trigger="hover"
+                       data-toggle="popover"
+                       data-placement="top"
+                       data-title="Knowledge discovery from large collections of unstructured information"
+                       data-content="
+The number of scientific publications is increasing by 3% per year, making it difficult for scientists to keep up with new research and to find relevant papers. As a result, time they could spent on research is used to stay up-to-date with the state-of-the-art in their fields. Wikipedia increasingly serves as a reliable source for up-to-date scientific knowledge. This fact is the main motivation for developing a knowledge discovery sup- port system capable of retrieving relevant documents on a selected subject. This the- sis focuses on state-of-the art solutions, aiming to support knowledge discovery from Wikipedia articles. While the majority of similar tools targets biomedical publications, this thesis focuses on Wikipedia pages related to marine science.
+The four main components of the proposed system are: document retrieval, doc- ument filtration, information extraction and interactive search. The retrieval compo- nent extracts the core page content from the Wikipedia pages and removes all wiki markup, leaving only the plain text of the article. The document filtration component selects those articles related to marine science by using a machine learning solution called topic modelling, which uses statistical methods for finding topically similar doc- uments. The information extraction component performs named entity recognition for geographical locations and marine species. In addition, it detects events involving variables that are increasing, decreasing or changing.
+Topic models were evaluated against a gold standard that was created with the help of domain experts using a pooling method. The evaluation of document filtering indi- cated that the best performing topic model is Latent Semantic Analysis (LSA) config- ured with 500 topics, yielding an NDCG score of 0.70. This model was subsequently used to retrieve 4727 marine science related articles from an initial list of 22 seed arti- cles.
+The search interface is a single-page web application which provides faceted search. The Solr-based implementation allows retrieving documents by search terms and fil- tering them by facet, including location, species and changing variables. A visualisa- tion method displays the extracted geographical locations as pinpoints on a map and presents changing variables in the text with colours indicating the direction of change.">
+                        <span class="glyphicon glyphicon-info-sign"></span> abstract</a> |
+                    <a href="https://brage.bibsys.no/xmlui/bitstream/handle/11250/2410721/-1/14391_FULLTEXT.pdf" target="_blank"><span
+                            class="glyphicon glyphicon-file"></span> thesis</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div style="margin: 32px">
+                <h4>Knowledge Discovery in Climate Science using Jess rule Engine</h4>
+                <div class="authors">Knut Harald Ryager</div>
+                <div class="venue">Department of Computer and Information Science</div>
+                <div class="venue">Norwegian University of Science and Technology</div>
+                <div class="date">2016</div>
+                <div class="biblinks">
+                    <a href="#" onClick="return false;" data-container="body" data-trigger="hover"
+                       data-toggle="popover"
+                       data-placement="top"
+                       data-title="Knowledge Discovery in Climate Science using Jess rule Engine"
+                       data-content="
+Climate change is a difficult research problem, requiring insight from vast fields such as chemistry, biology, climatology and oceanography. As the ever increasing publishing of information in these fields continue, text mining and knowledge discovery systems are being developed to alleviate the workload of extracting relevant information from literature. This master thesis focuses on knowledge discovery from extracted information, and ranking of proposed hypotheses. A rule-based inference system was implemented i Java using the Jess rule engine. The application consist of a set of general and domain specific logic rules, which operate on domain knowledge inputted to the system, and proposes hypotheses based on this input. The system can also abductively attempt to explain contradictions between expected and inputted knowledge. The system was tested on the domain hypotheses known as the iron hypothesis and the DOC hypothesis. The system was able to infer these hypotheses.">
+                        <span class="glyphicon glyphicon-info-sign"></span> abstract</a> |
+                    <a href="https://brage.bibsys.no/xmlui/bitstream/handle/11250/2410713/-1/12502_FULLTEXT.pdf" target="_blank"><span
+                            class="glyphicon glyphicon-file"></span> thesis</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
 
     <div class="row mt">
         <div class="col-md-6">
@@ -817,7 +866,7 @@ here, for example, from ecology, geology and paleobiology.">
      and testing versus an expanded gold standard.">
                         <span class="glyphicon glyphicon-info-sign"></span> abstract</a> |
                     <a href="http://hdl.handle.net/11250/2358376" target="_blank"><span
-                            class="glyphicon glyphicon-file"></span> paper</a>
+                            class="glyphicon glyphicon-file"></span> thesis</a>
                 </div>
             </div>
         </div>
@@ -840,7 +889,7 @@ In the semantic web, an ever increasing amount of machine readable information i
 This study seeks to find and utilize knowledge bases in order to generalize specific types of named entities, and finds that Linked Data resources are well suited for this task.">
                         <span class="glyphicon glyphicon-info-sign"></span> abstract</a> |
                     <a href="https://drive.google.com/open?id=0B6_H_KFDE9oMVDlsVmlVQ1hNOGs" target="_blank"><span
-                            class="glyphicon glyphicon-file"></span> paper</a>
+                            class="glyphicon glyphicon-file"></span> thesis</a>
                 </div>
             </div>
         </div>
@@ -865,7 +914,7 @@ This study seeks to find and utilize knowledge bases in order to generalize spec
     Climate change caused by anthropogenic activity is one of the biggest challenges of our time. Researchers are striving to understand the effects of global warming on the ecological systems of the oceans, and how these ecological systems influence the global climate, a line of research that is crucial in order to counteract or adapt to the effects of global warming. A major challenge that researchers in this area are facing, is the huge amount of potentially relevant literature, as insights from widely different fields such as biology, chemistry, climatology and oceanography can prove crucial in understanding the effects of global warming on the oceans. To alleviate some of the work load from researchers, information extraction tools can be used to extract relevant information from the scientific literature automatically, and discovery support tools can be developed to assist researchers in their efforts. This master thesis conducts fundamental research into the development of discovery support tools for oceanographic climate science, focusing primarily on the information extraction component. ">
                         <span class="glyphicon glyphicon-info-sign"></span> abstract</a> |
                     <a href="http://hdl.handle.net/11250/253925" target="_blank"><span
-                            class="glyphicon glyphicon-file"></span> paper</a>
+                            class="glyphicon glyphicon-file"></span> thesis</a>
                 </div>
             </div>
         </div>
@@ -968,7 +1017,8 @@ This study seeks to find and utilize knowledge bases in order to generalize spec
                 <p>The Marine Variable Linkers helps you to find related events in marine science literature.
                     The current demo system searches in over 75,000 abstracts of marine science articles from
                     more than 30 journals.</p>
-                <a href="http://baleen.idi.ntnu.no/demos/megamouth-abs" target="_blank" class="btn btn-primary btn-lg btn-block"
+                <a href="http://baleen.idi.ntnu.no/demos/megamouth-abs" target="_blank"
+                   class="btn btn-primary btn-lg btn-block"
                    role="button">Try it!</a>
             </div>
         </div><!--/col-lg-6 -->
